@@ -4,9 +4,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview --port 4173"
+    "preview": "vite preview --port 4173",
+    "prestart": "npm run build:css",
+    "build:css": "tailwindcss build ./src/tailwind.css -o ./src/main.css"
   },
   "dependencies": {
+    "tailwind": "^3.2.7",
     "vue": "^3.2.37",
     "vue-router": "^4.1.3"
   },

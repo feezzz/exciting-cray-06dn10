@@ -1,9 +1,17 @@
 <template>
-  <h1>Hello {{ msg }}</h1>
+  <div class="container mx-auto p-4">
+    <LoginForm />
+  </div>
+  
 </template>
 
-<script setup lang="ts">
-import { ref } from 'vue';
+<script>
+import LoginForm from "./LoginForm.vue";
 
-const msg = ref<string>('World');
+export default {
+  name: "App",
+  components: {
+    LoginForm,
+  },
+};
 </script>
